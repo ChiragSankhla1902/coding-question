@@ -1,0 +1,15 @@
+ques link-----------------https://www.hackerrank.com/challenges/finding-the-percentage/problem
+and solution------------------------------------------
+n=int(input(""))
+dic={}
+for i in range (n):
+    name=input()
+    name=name.split(" ")
+    x=(((float(name[1])+float(name[2])+float(name[3]))/3.00)+0.00)
+    first=name[0]
+    dic.update({first:x})
+
+det=input("")
+dis=dic.get(det)
+disp="{:.2f}".format(dis)
+print(disp)
