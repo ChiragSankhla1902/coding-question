@@ -1,0 +1,15 @@
+question link- https://www.hackerrank.com/challenges/nested-list/problem
+code----------------------------------------------------------
+	marksheet=[]
+scorelist=[]
+if _name_ == '_main_':
+        for _ in range(int(input())):
+                name = input()
+                score = float(input())
+                marksheet+=[[name,score]]
+                scorelist+=[score]
+        b=sorted(list(set(scorelist)))[1] 
+
+        for a,c in sorted(marksheet):
+             if c==b:
+                    print(a)
