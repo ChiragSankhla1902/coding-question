@@ -1,0 +1,10 @@
+link_----------------------------------------https://www.hackerrank.com/challenges/swap-case/problem
+code---------------------------------------------------
+def swap_case(a):
+    return(a.swapcase())
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+
