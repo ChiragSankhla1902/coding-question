@@ -1,0 +1,26 @@
+Q1)----------------------------------------- https://www.hackerrank.com/challenges/python-string-split-and-join/problem
+ans)-------------------------------------------------- def split_and_join(line):
+    line=line.split(" ")
+    c="-".join(line)
+    return(c)
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+Q2))----------------------------- https://www.hackerrank.com/challenges/whats-your-name/problem?h_r=next-challenge&h_v=zen
+ans) def print_full_name(a, b):
+    str1=("Hello firstname lastname! You just delved into python.")
+    str1=str1.split(" ")
+    str1[1]= first_name
+    str1[2]= last_name+"!"
+    print(" ".join(map(str,str1)))
+
+    
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+
+
