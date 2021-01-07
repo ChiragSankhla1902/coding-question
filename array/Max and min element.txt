@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int size,i,a;
+    vector<int> arr;
+    cin>>size;
+    for(i=0;i<size;i++){
+        cin>>a;
+        arr.push_back(a);
+    }
+    cout<<"max element :"<<*max_element(arr.begin(),arr.end())<<endl;
+    cout<<"min element :"<<*min_element(arr.begin(),arr.end())<<endl;
+    return 0;
+}

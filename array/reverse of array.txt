@@ -1,0 +1,19 @@
+#include<iostream>
+#include<vector>
+#include<array>
+using namespace std;
+
+int main(){
+    int i,size,a;
+    cin>>size;
+    vector <int> torev;
+    for(i=0;i<size;i++){
+        // cin>>a;
+        torev.push_back(i);
+    }
+    // reverse(torev.begin,torev.end); it will reverse the whole vector and print it using normal for loop
+    for(auto j = torev.rbegin(); j!=torev.rend();j++){
+        cout<<*j;
+    }
+    return 0;
+}
