@@ -1,0 +1,71 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------time execedding code---------------------------------------
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int count=0,value=0,i,j;
+        for(i=0;i<nums.size();i++)
+        {
+            count=0;
+            for(j=0;j<nums.size();j++){
+                if(nums[i]==nums[j]){
+                    count++;
+                    if(count==2){
+                        value=nums[i];   
+                    }
+                }
+            }
+            
+        }
+        return(value);
+    }
+};
+--------------------------------time execeding code----------------------------------------------------------------'class Solution {
+public:
+    int findDuplicate(vector<int>& nums) 
+    {
+        int count=0,value=0,i=0,j;
+        while(i<nums.size())
+        {
+            count=0;
+            for(j=0;j<nums.size();j++)
+            {
+                if(nums[i]==nums[j])
+                {
+                    count++;
+                    if(count==2)
+                    {
+                        value=nums[i];
+                    }
+                }
+                
+            }
+            i++;
+        }
+        return value;
+    }
+};---------------------------------------------------------------------------------------------------------------------------------------------
+
