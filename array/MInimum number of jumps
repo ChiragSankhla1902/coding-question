@@ -1,0 +1,23 @@
+int minJumps(int arr[], int n){
+    int i,Maxreachable=arr[0],steps=arr[0],jump=1;
+    for(i=1;i<n;i++){
+        if(i==n-1){
+            return jump;
+            break;
+        }
+        if(arr[0]==0){
+            jump=-1;
+            return jump;
+        }
+        Maxreachable=max(Maxreachable,arr[i]+i);
+        steps--;
+        if(steps==0){
+            jump++;
+            if(i>=Maxreachable){
+                return -1;
+            }
+        steps=Maxreachable-i;
+        }
+        
+    }
+}
