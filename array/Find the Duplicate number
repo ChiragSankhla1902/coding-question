@@ -1,25 +1,18 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+----------------------optimized one-------------------------------------------------------------------------
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) 
+    {
+        int count=0,value=0,i=0;
+        sort(nums.begin(),nums.end());
+        for(i=0;i<nums.size()-1;i++){
+            if(nums[i]==nums[i+1]){
+                value=nums[i];
+            }
+        }
+        return value;
+    }
+};
 
 
 -------------------------------------time execedding code---------------------------------------
