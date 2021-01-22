@@ -4,17 +4,17 @@ public:
 	    int arr3[n+m];
 	    int i,j;
 	    for(i=0;i<n+m;i++){
-	        if(i<n){ //0123
+	        if(i<n){                                               //first array index
 	            arr3[i]=arr1[i];
 	        }
-	        if(n+i<n+m){//45678
+	        if(n+i<n+m){                                          //Second array index
 	            arr3[n+i]=arr2[i];
 	        }
 	        
 	    }
 	    sort(arr3,arr3+n+m);
 	    for(i=0;i<n+m;i++){
-	        if(i<n){ //0123
+	        if(i<n){ 
 	            arr1[i]=arr3[i];
 	        }
 	        if(n+i<n+m){//45678
