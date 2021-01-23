@@ -1,0 +1,28 @@
+class Solution {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        vector<vector<int>> mergedinterval;
+        if(intervals.size()==0){
+            return mergedinterval;
+        }
+        sort(intervals.begin(),intervals.end()); //sorting vector
+        vector<int>tempvector=intervals[0];   //intializing first pair for comparing
+        for(auto i:intervals){               //for iterating in vector
+            if(i[0]<=tempvector[1]){
+                tempvector[1]=max(i[1],tempvector[1]); 
+                tempvector[0]=min(i[0],tempvector[0]);
+
+            }
+            else{
+                mergedinterval.push_back(tempvector);
+                tempvector=i;
+            }
+        }
+        mergedinterval.push_back(tempvector); //pushing the last vector set 
+        return mergedinterval;
+    }
+};
+
+
+
+resource --------- https://www.youtube.com/watch?v=2JzRBPFYbKE&feature=youtu.be
