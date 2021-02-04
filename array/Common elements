@@ -17,7 +17,7 @@ class Solution
                 m3[C[i]]++;
             }
             for(i=0;i<n1;i++){
-                if(m1[A[i]]and m2[A[i]] and m3[A[i]]){
+                if(m1[A[i]]and m2[A[i]] and m3[A[i]]){ //m[A{i]]>0 means the same as m[A[i]]
                     v.push_back(A[i]);
                     m1[A[i]]=0;
                 }
