@@ -1,41 +1,29 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---------------------------------For Unique-------------------------------------------------------------------
 class Solution
 {
     public:    
        vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3)
         {
+
+            unordered_map<int,int>m1,m2,m3;
+            int i;
             vector<int>v;
-            int i=0,j=0,k=0;
-            while(i<n1 &&  j<n2 &&  k<n3){
-                if(A[i]==B[j]&&B[j]==C[k]){
-                    v.emplace_back(A[i]);
-                    i++;k++;j++;
-                }
-                else if(A[i]<B[j]){
-                    i++;
-                }
-                else if(B[j]<C[k]){
-                    j++;
+            for(i=0;i<n1;i++){
+                m1[A[i]]++;
+            }
+            for(i=0;i<n2;i++){
+                m2[B[i]]++;
+            }
+            for(i=0;i<n3;i++){
+                m3[C[i]]++;
+            }
+            for(i=0;i<n1;i++){
+                if(m1[A[i]]and m2[A[i]] and m3[A[i]]){
+                    v.push_back(A[i]);
+                    m1[A[i]]=0;
                 }
                 else{
-                    k++;
+                    continue;
                 }
             }
             return v;
         }
-
-};
