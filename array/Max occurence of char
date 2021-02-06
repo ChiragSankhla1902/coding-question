@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+
+ using namespace std;
+
+ int main()
+{
+    string s;
+    cin>>s;
+    int maxi;
+    vector<int>v;
+    map<char , int >m;
+    map<char , int >::iterator itr;
+    for(long i=0;i<s.length();i++){
+        m[s[i]]++;
+    }
+        
+    for(itr=m.begin();itr!=m.end();itr++){
+      v.push_back(itr->second);
+    }
+    maxi= *max_element(v.begin(),v.end());
+    for(itr=m.begin();itr!=m.end();itr++){
+      if(itr->second==maxi){
+          cout<<int(itr->first)<<itr->first;
+          break;
+      }
+    }
+}
