@@ -13,3 +13,4 @@ int maxProfit(int price[], int n)
  
     return profit2;
 }
+https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-stock-at-most-twice-set-2/?ref=rp
