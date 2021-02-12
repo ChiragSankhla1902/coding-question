@@ -1,0 +1,17 @@
+class Solution{   
+public:
+    int median(vector<vector<int>> &matrix, int r, int c){
+        int i,j,sum=0,med=0,temp;
+        vector<int>v;
+        for(i=0;i<r;i++){
+            for(j=0;j<c;j++){
+                v.push_back(matrix[i][j]);
+            }
+
+        }
+        sort(v.begin(),v.end());
+        sum=(r*c)/2;
+        return(v[sum]);
+
+    }
+};
