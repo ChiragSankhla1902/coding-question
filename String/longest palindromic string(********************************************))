@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+void printstr(string s,int start,int end){
+    for(int i=start;i<=end;i++){
+        cout<<s[i];
+    }
+}
+void longstr(string s){
+    int l,h;
+    int start=0,end=1;
+    for(int i=0;i<s.length();i++){
+        // Even string
+        l=i-1;
+        h=i;
+        while(l>=0 && h<s.length() && s[l]==s[h]){
+            if(h-l+1>end){
+                start=l;
+                end=h-l+1;
+            }
+            l--;
+            h++;
+            
+        }
+        //odd lenght
+        l=i-1;
+        h=i+1;
+        while(l>=0 && h<s.length() && s[l]==s[h]){
+            if(h-l+1>end){
+                start=l;
+                end=h-l+1;
+            }
+            l--;
+            h++;
+        }
+        
+    }
+    printstr(s,start,start+end-1);
+    cout<<endl;
+}
+
+
+
+
+int main() {
+    
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        longstr(s);
+    }
+	
+	return 0;
+}
