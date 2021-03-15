@@ -1,0 +1,30 @@
+class Solution{
+public:
+    vector<int> nextPermutation(int n, vector<int> arr){
+        int idx=-1;
+        if(n==1){
+            return arr;
+        }
+        for(int i=n-1;i>0;i--){
+            if(arr[i]>arr[i-1]){
+                idx=i;
+                break;
+            }
+        }
+        if(idx==-1){
+            reverse(arr.begin(),arr.end());
+        }
+        else{
+            int pre;
+            pre=idx;
+            for(int i=idx;i<arr.size();i++){
+                if(arr[idx-1]<arr[i] and arr[i]<=arr[idx]){
+                    pre=i;
+                }
+            }
+            swap(arr[idx-1],arr[pre]);
+            reverse(arr.begin()+idx,arr.end());
+        }
+        return arr;
+    }
+};
